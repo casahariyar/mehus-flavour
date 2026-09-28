@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mehu's Flavour — কেক হিসাব খাতা</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#e6207f">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiB2aWV3Qm94PSIwIDAgMjAwIDIwMCI+CjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI2YwNDc5YSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzhmMGY1MCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPgo8Y2lyY2xlIGN4PSIxMDAiIGN5PSIxMDAiIHI9Ijk2IiBmaWxsPSJ1cmwoI2cpIi8+CjxjaXJjbGUgY3g9IjEwMCIgY3k9IjEwMCIgcj0iODgiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLW9wYWNpdHk9Ii42IiBzdHJva2Utd2lkdGg9IjMiIHN0cm9rZS1kYXNoYXJyYXk9IjIgNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CjxyZWN0IHg9IjM4IiB5PSIxNDYiIHdpZHRoPSIxMjQiIGhlaWdodD0iOSIgcng9IjQuNSIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iLjkyIi8+CjxyZWN0IHg9IjUyIiB5PSIxMTIiIHdpZHRoPSI5NiIgaGVpZ2h0PSIzNiIgcng9IjgiIGZpbGw9IiNmZmYwZTgiLz4KPHJlY3QgeD0iNTIiIHk9IjEyOCIgd2lkdGg9Ijk2IiBoZWlnaHQ9IjQiIGZpbGw9IiNmMGNkYjgiLz4KPHJlY3QgeD0iNTAiIHk9IjEwNiIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMiIgcng9IjYiIGZpbGw9IiNmZmI2ZDUiLz4KPGcgZmlsbD0iI2ZmYjZkNSI+PGVsbGlwc2UgY3g9IjY0IiBjeT0iMTE4IiByeD0iNSIgcnk9IjkiLz48ZWxsaXBzZSBjeD0iOTAiIGN5PSIxMTgiIHJ4PSI1IiByeT0iNyIvPjxlbGxpcHNlIGN4PSIxMTYiIGN5PSIxMTgiIHJ4PSI1IiByeT0iMTAiLz48ZWxsaXBzZSBjeD0iMTM4IiBjeT0iMTE4IiByeD0iNSIgcnk9IjciLz48L2c+CjxyZWN0IHg9IjY4IiB5PSI4MCIgd2lkdGg9IjY0IiBoZWlnaHQ9IjMwIiByeD0iOCIgZmlsbD0iI2ZmZiIvPgo8cmVjdCB4PSI2NiIgeT0iNzYiIHdpZHRoPSI2OCIgaGVpZ2h0PSIxMiIgcng9IjYiIGZpbGw9IiNmZmI2ZDUiLz4KPGcgZmlsbD0iI2ZmYjZkNSI+PGVsbGlwc2UgY3g9IjgwIiBjeT0iODgiIHJ4PSI0LjUiIHJ5PSI4Ii8+PGVsbGlwc2UgY3g9IjEwNCIgY3k9Ijg4IiByeD0iNC41IiByeT0iNiIvPjxlbGxpcHNlIGN4PSIxMjQiIGN5PSI4OCIgcng9IjQuNSIgcnk9IjkiLz48L2c+CjxwYXRoIGQ9Ik0xMDAgNjQgUTEwMiA1MiAxMTIgNDYiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzVhOGYzYyIgc3Ryb2tlLXdpZHRoPSIzIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPGNpcmNsZSBjeD0iMTAwIiBjeT0iNjgiIHI9IjkiIGZpbGw9IiNmZjNiNWMiLz4KPGNpcmNsZSBjeD0iOTciIGN5PSI2NSIgcj0iMi42IiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIuOCIvPgo8ZyBmaWxsPSIjZmZmIj48cGF0aCBkPSJNNDggNTggbDMgOCA4IDMgLTggMyAtMyA4IC0zIC04IC04IC0zIDggLTN6Ii8+PHBhdGggZD0iTTE1NCA1MiBsMi41IDYgNiAyLjUgLTYgMi41IC0yLjUgNiAtMi41IC02IC02IC0yLjUgNiAtMi41eiIvPjxwYXRoIGQ9Ik0xNTggMTAwIGwyIDQuNSA0LjUgMiAtNC41IDIgLTIgNC41IC0yIC00LjUgLTQuNSAtMiA0LjUgLTJ6IiBvcGFjaXR5PSIuOCIvPjwvZz4KPC9zdmc+Cg==">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@500;600;700;800&family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#fff6f2;
+    --card:#ffffff;
+    --pink:#e6207f;
+    --pink-dark:#b91466;
+    --pink-deep:#8f0f50;
+    --pink-soft:#ffe1ee;
+    --brown:#7a3b2e;
+    --brown-dark:#5a2a20;
+    --cream:#fff0e8;
+    --text:#3a241e;
+    --text-soft:#7a635c;
+    --success:#1f8f5f;
+    --success-bg:#e6f7ef;
+    --danger:#c23b3b;
+    --danger-bg:#fdeaea;
+    --line:#f0d9cd;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:
+      radial-gradient(circle at 15% 0%, var(--pink-soft) 0%, transparent 45%),
+      var(--bg);
+    font-family:'Hind Siliguri', sans-serif;
+    color:var(--text);
+    padding-bottom:40px;
+  }
+  h1,h2,h3,.brand{font-family:'Baloo Da 2', sans-serif;}
+  .wrap{max-width:880px;margin:0 auto;padding:18px 16px 0;}
+  header{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    padding:14px 18px;
+    background:var(--card);
+    border-radius:22px;
+    box-shadow:0 10px 30px -18px rgba(143,15,80,0.35);
+    border:1px solid var(--line);
+  }
+  header img{
+    width:64px;height:64px;border-radius:50%;
+    object-fit:cover;
+    border:3px solid var(--pink-soft);
+    background:#fff;
+  }
+  header .brand{font-size:1.5rem;color:var(--pink-deep);font-weight:700;line-height:1.1;}
+  header .sub{font-size:0.85rem;color:var(--text-soft);margin-top:2px;}
+  .ribbon{
+    position:relative;
+    display:inline-block;
+    background:var(--pink);
+    color:#fff;
+    font-family:'Baloo Da 2', sans-serif;
+    font-weight:600;
+    font-size:1.05rem;
+    padding:8px 26px;
+    margin:28px 0 14px;
+    border-radius:6px;
+  }
+  .ribbon:before,.ribbon:after{
+    content:"";
+    position:absolute;
+    top:0;
+    border:15px solid var(--pink-dark);
+    z-index:-1;
+  }
+  .ribbon:before{left:-14px;border-left-color:transparent;}
+  .ribbon:after{right:-14px;border-right-color:transparent;}
+  .stats{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+  }
+  @media(min-width:600px){.stats{grid-template-columns:repeat(5,1fr);}.stat.due{grid-column:auto;}}
+  .stat.due{grid-column:1/-1;border-top:4px solid var(--danger);}
+  .stat.due .value{color:var(--danger);}
+  .stat{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:18px;
+    padding:16px 14px;
+    position:relative;
+    overflow:hidden;
+  }
+  .stat .label{font-size:0.78rem;color:var(--text-soft);font-weight:500;}
+  .stat .value{font-family:'Baloo Da 2';font-size:1.35rem;font-weight:700;margin-top:4px;color:var(--brown-dark);}
+  .stat.sales{border-top:4px solid var(--pink);}
+  .stat.cost{border-top:4px solid var(--brown);}
+  .stat.profit{border-top:4px solid var(--success);}
+  .stat.count{border-top:4px solid #caa24a;}
+  .stat.profit .value{color:var(--success);}
+  .stat.cost .value{color:var(--brown);}
+  .stat.sales .value{color:var(--pink-dark);}
+  .card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:20px;
+    padding:20px;
+  }
+  .grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+  }
+  @media(max-width:520px){.grid{grid-template-columns:1fr;}}
+  .field{display:flex;flex-direction:column;gap:6px;}
+  .field label{font-size:0.82rem;font-weight:600;color:var(--brown-dark);}
+  .field input, .field select, .field textarea{
+    font-family:'Hind Siliguri';
+    font-size:0.95rem;
+    padding:10px 12px;
+    border-radius:12px;
+    border:1.5px solid var(--line);
+    background:#fffaf7;
+    color:var(--text);
+    outline:none;
+  }
+  .field input:focus, .field select:focus, .field textarea:focus{
+    border-color:var(--pink);
+    background:#fff;
+  }
+  .field.full{grid-column:1/-1;}
+  .flavor-custom{display:none;}
+  .flavor-custom.show{display:flex;}
+  .pound-custom{display:none;}
+  .pound-custom.show{display:flex;}
+  .btn{
+    font-family:'Baloo Da 2';
+    font-weight:600;
+    font-size:1rem;
+    border:none;
+    border-radius:14px;
+    padding:12px 20px;
+    cursor:pointer;
+    color:#fff;
+    background:var(--pink);
+    transition:transform .12s ease, background .15s ease;
+  }
+  .btn:hover{background:var(--pink-dark);}
+  .btn:active{transform:scale(0.97);}
+  .btn.block{width:100%;margin-top:16px;}
+  .table-wrap{overflow-x:auto;border-radius:18px;border:1px solid var(--line);}
+  table{width:100%;border-collapse:collapse;background:var(--card);min-width:640px;}
+  thead th{
+    background:var(--cream);
+    color:var(--brown-dark);
+    font-size:0.8rem;
+    text-align:left;
+    padding:10px 12px;
+    white-space:nowrap;
+    border-bottom:2px solid var(--line);
+  }
+  tbody td{
+    padding:10px 12px;
+    font-size:0.88rem;
+    border-bottom:1px solid var(--line);
+    white-space:nowrap;
+  }
+  tbody tr:last-child td{border-bottom:none;}
+  tbody tr:hover{background:#fff9f6;}
+  .profit-pos{color:var(--success);font-weight:600;}
+  .profit-neg{color:var(--danger);font-weight:600;}
+  .del-btn{
+    background:var(--danger-bg);
+    color:var(--danger);
+    border:none;
+    border-radius:8px;
+    padding:6px 10px;
+    font-family:'Hind Siliguri';
+    font-size:0.8rem;
+    cursor:pointer;
+  }
+  .del-btn:hover{background:#f8d4d4;}
+  .empty-state{
+    text-align:center;
+    padding:40px 20px;
+    color:var(--text-soft);
+    background:var(--card);
+    border-radius:18px;
+    border:1px dashed var(--line);
+  }
+  footer{
+    margin-top:34px;
+    background:linear-gradient(135deg, var(--pink-deep), var(--pink));
+    color:#fff;
+    border-radius:22px;
+    padding:22px 24px;
+  }
+  footer h3{margin:0 0 12px;font-size:1.15rem;}
+  .ceo-row{display:flex;flex-wrap:wrap;gap:18px;font-size:0.88rem;}
+  .ceo-item{display:flex;flex-direction:column;gap:2px;}
+  .ceo-item span.k{opacity:0.75;font-size:0.75rem;}
+  .ceo-item span.v{font-weight:600;}
+  footer .copyright{margin-top:16px;font-size:0.75rem;opacity:0.75;border-top:1px solid rgba(255,255,255,0.25);padding-top:12px;}
+  .toast{
+    position:fixed;bottom:20px;left:50%;transform:translateX(-50%);
+    background:var(--brown-dark);color:#fff;padding:10px 20px;border-radius:30px;
+    font-size:0.85rem;opacity:0;pointer-events:none;transition:opacity .25s ease;
+    z-index:50;
+  }
+  .toast.show{opacity:1;}
+  .btn.alt{background:#fff;color:var(--pink-dark);border:1.5px solid var(--pink);}
+  .btn.alt:hover{background:var(--pink-soft);}
+  .btn-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px;}
+  .btn-row .btn{flex:1;min-width:150px;margin:0;}
+  .month-head{display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end;}
+  .month-head .field{min-width:180px;}
+  .msum{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:14px;}
+  @media(min-width:600px){.msum{grid-template-columns:repeat(5,1fr);}}
+  .msum div{background:var(--cream);border-radius:14px;padding:10px 12px;}
+  .msum .k{font-size:0.74rem;color:var(--text-soft);}
+  .msum .v{font-family:'Baloo Da 2';font-weight:700;font-size:1.05rem;color:var(--brown-dark);}
+  .msum .v.g{color:var(--success);} .msum .v.r{color:var(--danger);}
+  .due-list{display:grid;gap:10px;}
+  .due-item{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--danger);border-radius:16px;padding:12px 14px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;}
+  .due-item .who{font-weight:600;color:var(--brown-dark);}
+  .due-item .meta{font-size:0.8rem;color:var(--text-soft);margin-top:2px;}
+  .due-item .amt{font-family:'Baloo Da 2';font-weight:700;color:var(--danger);font-size:1.15rem;text-align:right;}
+  .due-item a{color:var(--pink-dark);text-decoration:none;}
+  .pay-btn{background:var(--success-bg);color:var(--success);border:none;border-radius:8px;padding:6px 10px;font-family:'Hind Siliguri';font-size:0.8rem;cursor:pointer;font-weight:600;margin-right:4px;}
+  .pay-btn:hover{background:#cdeedd;}
+  .due-total{font-size:0.9rem;color:var(--danger);font-weight:600;margin:0 0 10px;}
+  .badge-due{color:var(--danger);font-weight:600;}
+  .badge-paid{color:var(--success);}
+  small.cust{color:var(--text-soft);}
+  #printArea{display:none;}
+  @media print{
+    .wrap,.toast{display:none !important;}
+    body{background:#fff;padding:0;}
+    #printArea{display:block;padding:8px;color:#000;}
+    #printArea h2{margin:0 0 4px;color:#8f0f50;}
+    #printArea .pmeta{font-size:0.85rem;margin-bottom:12px;color:#444;}
+    #printArea table{min-width:0;font-size:0.8rem;}
+    #printArea th,#printArea td{border:1px solid #999;padding:5px 6px;white-space:normal;}
+    #printArea th{background:#f6e3ea;}
+    #printArea tfoot td{font-weight:700;background:#faf0f4;}
+    #printArea .pfoot{margin-top:14px;font-size:0.75rem;color:#555;}
+  }
+  .loading-note{text-align:center;color:var(--text-soft);padding:20px;font-size:0.85rem;}
+  /* ===== Reorganised layout ===== */
+  body{padding-bottom:96px;}
+  .panel[hidden],.calc[hidden]{display:none;}
+  header{margin-bottom:14px;}
+  .tabs{position:fixed;left:0;right:0;bottom:0;z-index:40;display:flex;gap:4px;padding:8px 10px calc(8px + env(safe-area-inset-bottom));background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-top:1px solid var(--line);}
+  .tabs button{flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;border:none;background:none;padding:6px 4px;border-radius:14px;font:600 .74rem 'Hind Siliguri',sans-serif;color:var(--text-soft);cursor:pointer;}
+  .tabs button .ic{font-size:1.25rem;line-height:1;}
+  .tabs button.on{background:var(--pink-soft);color:var(--pink-deep);}
+  .toast{bottom:90px;}
+  .sec{margin:24px 0 12px;}
+  .sec h2{margin:0;font-size:1.2rem;color:var(--pink-deep);}
+  .sec p{margin:2px 0 0;font-size:.82rem;color:var(--text-soft);}
+  .hero{background:linear-gradient(135deg,var(--pink-deep),var(--pink));color:#fff;border-radius:24px;padding:20px 22px;display:flex;justify-content:space-between;align-items:flex-end;gap:12px;}
+  .hero .label{font-size:.85rem;opacity:.85;}
+  .hero .value{font-family:'Baloo Da 2',sans-serif;font-size:2.4rem;font-weight:800;line-height:1.1;}
+  .hero .chip{background:rgba(255,255,255,.18);border-radius:14px;padding:8px 14px;text-align:center;}
+  .hero .chip b{display:block;font-family:'Baloo Da 2',sans-serif;font-size:1.3rem;}
+  .hero .chip span{font-size:.75rem;opacity:.85;}
+  .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px;}
+  .kpi{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:12px;}
+  .kpi .label{font-size:.75rem;color:var(--text-soft);}
+  .kpi .value{font-family:'Baloo Da 2',sans-serif;font-weight:700;font-size:1.15rem;margin-top:2px;}
+  .kpi.sales .value{color:var(--pink-dark);}
+  .kpi.cost .value{color:var(--brown);}
+  .kpi.due{background:var(--danger-bg);border-color:#f3c9c9;}
+  .kpi.due .value{color:var(--danger);}
+  @media(max-width:380px){.kpi .value{font-size:1rem;}.hero .value{font-size:2rem;}}
+  fieldset{border:none;margin:0 0 22px;padding:0;min-width:0;}
+  legend{width:100%;padding:0 0 6px;margin-bottom:12px;border-bottom:1px dashed var(--line);font-family:'Baloo Da 2',sans-serif;font-weight:600;font-size:1.02rem;color:var(--brown-dark);}
+  legend small{font-family:'Hind Siliguri',sans-serif;font-weight:400;font-size:.78rem;color:var(--text-soft);}
+  .calc{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:12px;padding:12px 14px;background:var(--cream);border-radius:14px;font-size:.9rem;}
+  .calc b{font-family:'Baloo Da 2',sans-serif;color:var(--brown-dark);}
+  .field.search{margin-bottom:12px;}
+  .note-text{font-size:.88rem;color:var(--text-soft);line-height:1.6;}
+  .last-backup{font-size:.8rem;margin-top:8px;color:var(--brown);}
+  .tabs button:focus-visible,.btn:focus-visible,.pay-btn:focus-visible,.del-btn:focus-visible{outline:3px solid var(--pink);outline-offset:2px;}
+  @media(min-width:720px){
+    body{padding-bottom:40px;}
+    .tabs{position:static;border:1px solid var(--line);border-radius:18px;padding:6px;background:var(--card);}
+    .tabs button{flex-direction:row;justify-content:center;gap:8px;font-size:.92rem;padding:10px;}
+    .toast{bottom:20px;}
+  }
+  /* ===== Cash memo ===== */
+  .memo-btn{background:var(--pink-soft);color:var(--pink-deep);border:none;border-radius:8px;padding:6px 10px;font-family:'Hind Siliguri',sans-serif;font-size:.8rem;font-weight:600;cursor:pointer;margin-right:4px;}
+  .memo-btn:hover{background:#ffd0e3;}
+  dialog{border:none;border-radius:22px;padding:22px;width:calc(100% - 32px);max-width:360px;color:var(--text);box-shadow:0 20px 50px -20px rgba(143,15,80,.5);}
+  dialog::backdrop{background:rgba(58,36,30,.45);}
+  dialog h3{margin:0 0 6px;color:var(--pink-deep);font-size:1.2rem;}
+  dialog p{margin:0;font-size:.9rem;color:var(--text-soft);line-height:1.5;}
+  .dlg-actions{display:flex;flex-direction:column;gap:8px;margin-top:16px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <img id="siteLogo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiB2aWV3Qm94PSIwIDAgMjAwIDIwMCI+CjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI2YwNDc5YSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzhmMGY1MCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPgo8Y2lyY2xlIGN4PSIxMDAiIGN5PSIxMDAiIHI9Ijk2IiBmaWxsPSJ1cmwoI2cpIi8+CjxjaXJjbGUgY3g9IjEwMCIgY3k9IjEwMCIgcj0iODgiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLW9wYWNpdHk9Ii42IiBzdHJva2Utd2lkdGg9IjMiIHN0cm9rZS1kYXNoYXJyYXk9IjIgNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CjxyZWN0IHg9IjM4IiB5PSIxNDYiIHdpZHRoPSIxMjQiIGhlaWdodD0iOSIgcng9IjQuNSIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iLjkyIi8+CjxyZWN0IHg9IjUyIiB5PSIxMTIiIHdpZHRoPSI5NiIgaGVpZ2h0PSIzNiIgcng9IjgiIGZpbGw9IiNmZmYwZTgiLz4KPHJlY3QgeD0iNTIiIHk9IjEyOCIgd2lkdGg9Ijk2IiBoZWlnaHQ9IjQiIGZpbGw9IiNmMGNkYjgiLz4KPHJlY3QgeD0iNTAiIHk9IjEwNiIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMiIgcng9IjYiIGZpbGw9IiNmZmI2ZDUiLz4KPGcgZmlsbD0iI2ZmYjZkNSI+PGVsbGlwc2UgY3g9IjY0IiBjeT0iMTE4IiByeD0iNSIgcnk9IjkiLz48ZWxsaXBzZSBjeD0iOTAiIGN5PSIxMTgiIHJ4PSI1IiByeT0iNyIvPjxlbGxpcHNlIGN4PSIxMTYiIGN5PSIxMTgiIHJ4PSI1IiByeT0iMTAiLz48ZWxsaXBzZSBjeD0iMTM4IiBjeT0iMTE4IiByeD0iNSIgcnk9IjciLz48L2c+CjxyZWN0IHg9IjY4IiB5PSI4MCIgd2lkdGg9IjY0IiBoZWlnaHQ9IjMwIiByeD0iOCIgZmlsbD0iI2ZmZiIvPgo8cmVjdCB4PSI2NiIgeT0iNzYiIHdpZHRoPSI2OCIgaGVpZ2h0PSIxMiIgcng9IjYiIGZpbGw9IiNmZmI2ZDUiLz4KPGcgZmlsbD0iI2ZmYjZkNSI+PGVsbGlwc2UgY3g9IjgwIiBjeT0iODgiIHJ4PSI0LjUiIHJ5PSI4Ii8+PGVsbGlwc2UgY3g9IjEwNCIgY3k9Ijg4IiByeD0iNC41IiByeT0iNiIvPjxlbGxpcHNlIGN4PSIxMjQiIGN5PSI4OCIgcng9IjQuNSIgcnk9IjkiLz48L2c+CjxwYXRoIGQ9Ik0xMDAgNjQgUTEwMiA1MiAxMTIgNDYiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzVhOGYzYyIgc3Ryb2tlLXdpZHRoPSIzIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPGNpcmNsZSBjeD0iMTAwIiBjeT0iNjgiIHI9IjkiIGZpbGw9IiNmZjNiNWMiLz4KPGNpcmNsZSBjeD0iOTciIGN5PSI2NSIgcj0iMi42IiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIuOCIvPgo8ZyBmaWxsPSIjZmZmIj48cGF0aCBkPSJNNDggNTggbDMgOCA4IDMgLTggMyAtMyA4IC0zIC04IC04IC0zIDggLTN6Ii8+PHBhdGggZD0iTTE1NCA1MiBsMi41IDYgNiAyLjUgLTYgMi41IC0yLjUgNiAtMi41IC02IC02IC0yLjUgNiAtMi41eiIvPjxwYXRoIGQ9Ik0xNTggMTAwIGwyIDQuNSA0LjUgMiAtNC41IDIgLTIgNC41IC0yIC00LjUgLTQuNSAtMiA0LjUgLTJ6IiBvcGFjaXR5PSIuOCIvPjwvZz4KPC9zdmc+Cg==" alt="Mehu's Flavour Logo">
+    <div>
+      <div class="brand">Mehu's Flavour</div>
+      <div class="sub">কেক হিসাব খাতা — বিক্রয়, খরচ ও লাভের হিসাব</div>
+    </div>
+  </header>
+
+  <nav class="tabs" aria-label="মেনু">
+    <button type="button" data-tab="home" class="on"><span class="ic">🏠</span>হোম</button>
+    <button type="button" data-tab="add"><span class="ic">➕</span>নতুন হিসাব</button>
+    <button type="button" data-tab="list"><span class="ic">📒</span>তালিকা</button>
+    <button type="button" data-tab="report"><span class="ic">📅</span>রিপোর্ট</button>
+  </nav>
+
+  <!-- হোম -->
+  <section class="panel" data-panel="home">
+    <div class="sec"><h2>সারসংক্ষেপ</h2><p>এখন পর্যন্ত সব হিসাব মিলিয়ে</p></div>
+    <div class="hero">
+      <div>
+        <div class="label">মোট লাভ</div>
+        <div class="value" id="statProfit">৳০</div>
+      </div>
+      <div class="chip"><b id="statCount">০</b><span>কেক বিক্রি</span></div>
+    </div>
+    <div class="kpis">
+      <div class="kpi sales"><div class="label">মোট বিক্রয়</div><div class="value" id="statSales">৳০</div></div>
+      <div class="kpi cost"><div class="label">উপকরণ খরচ</div><div class="value" id="statCost">৳০</div></div>
+      <div class="kpi due"><div class="label">মোট বাকি</div><div class="value" id="statDue">৳০</div></div>
+    </div>
+    <div class="sec"><h2>💰 বাকির তালিকা</h2><p>কাস্টমারের কাছে যা পাব</p></div>
+    <div id="dueContainer"></div>
+  </section>
+
+  <!-- নতুন হিসাব -->
+  <section class="panel" data-panel="add" hidden>
+    <div class="sec"><h2>🎂 নতুন কেকের হিসাব</h2><p>তিনটি ধাপে সহজে যোগ করুন</p></div>
+    <div class="card">
+      <form id="cakeForm">
+        <fieldset>
+          <legend>🎂 অর্ডারের তথ্য</legend>
+          <div class="grid">
+            <div class="field full">
+              <label>কেক / অর্ডারের নাম</label>
+              <input type="text" id="cakeName" placeholder="যেমন: জন্মদিনের কেক - রুনা আপু" required>
+            </div>
+            <div class="field">
+              <label>তারিখ</label>
+              <input type="date" id="cakeDate" required>
+            </div>
+            <div class="field">
+              <label>ফ্লেভার</label>
+              <select id="flavorSelect">
+                <option value="চকোলেট">চকোলেট</option>
+                <option value="ভ্যানিলা">ভ্যানিলা</option>
+                <option value="রেড ভেলভেট">রেড ভেলভেট</option>
+                <option value="ব্ল্যাক ফরেস্ট">ব্ল্যাক ফরেস্ট</option>
+                <option value="বাটারস্কচ">বাটারস্কচ</option>
+                <option value="ফ্রুট">ফ্রুট</option>
+                <option value="পাইনঅ্যাপল">পাইনঅ্যাপল</option>
+                <option value="oreo">অরিও</option>
+                <option value="__other">অন্যান্য (লিখুন)</option>
+              </select>
+            </div>
+            <div class="field flavor-custom" id="flavorCustomWrap">
+              <label>ফ্লেভারের নাম লিখুন</label>
+              <input type="text" id="flavorCustom" placeholder="ফ্লেভারের নাম">
+            </div>
+            <div class="field">
+              <label>পাউন্ড / ওজন</label>
+              <select id="poundSelect">
+                <option value="0.5">০.৫ পাউন্ড</option>
+                <option value="1" selected>১ পাউন্ড</option>
+                <option value="1.5">১.৫ পাউন্ড</option>
+                <option value="2">২ পাউন্ড</option>
+                <option value="3">৩ পাউন্ড</option>
+                <option value="4">৪ পাউন্ড</option>
+                <option value="5">৫ পাউন্ড</option>
+                <option value="__other">অন্যান্য (লিখুন)</option>
+              </select>
+            </div>
+            <div class="field pound-custom" id="poundCustomWrap">
+              <label>পাউন্ড লিখুন</label>
+              <input type="number" step="0.1" id="poundCustom" placeholder="যেমন: ৬">
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>👤 গ্রাহক ও নোট <small>(ঐচ্ছিক)</small></legend>
+          <div class="grid">
+            <div class="field">
+              <label>গ্রাহকের নাম</label>
+              <input type="text" id="custName" placeholder="যেমন: রুনা আপু">
+            </div>
+            <div class="field">
+              <label>গ্রাহকের মোবাইল</label>
+              <input type="tel" id="custPhone" placeholder="যেমন: 017XXXXXXXX">
+            </div>
+            <div class="field full">
+              <label>নোট</label>
+              <input type="text" id="note" placeholder="যেমন: বিশেষ ডিজাইন, ডেলিভারির সময়">
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>💰 টাকার হিসাব</legend>
+          <div class="grid">
+            <div class="field">
+              <label>বিক্রয় মূল্য (৳)</label>
+              <input type="number" id="salePrice" min="0" step="1" placeholder="যেমন: ১২০০" required>
+            </div>
+            <div class="field">
+              <label>উপকরণ খরচ (৳)</label>
+              <input type="number" id="costPrice" min="0" step="1" placeholder="যেমন: ৫০০" required>
+            </div>
+            <div class="field full">
+              <label>এখন কত টাকা পেয়েছেন? (৳)</label>
+              <input type="number" id="paidNow" min="0" step="1" placeholder="ফাঁকা রাখলে পুরো টাকা পেয়েছেন ধরা হবে">
+            </div>
+          </div>
+          <div class="calc" id="calcPreview" hidden>
+            <div>লাভ হবে: <b id="calcProfit">৳০</b></div>
+            <div>বাকি থাকবে: <b id="calcDue">৳০</b></div>
+          </div>
+        </fieldset>
+
+        <button type="submit" class="btn block">➕ হিসাব যোগ করুন</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- তালিকা -->
+  <section class="panel" data-panel="list" hidden>
+    <div class="sec"><h2>📒 সকল হিসাব</h2><p>নতুন থেকে পুরনো ক্রমে</p></div>
+    <div class="field search"><input type="search" id="listSearch" placeholder="🔎 নাম, গ্রাহক বা ফ্লেভার দিয়ে খুঁজুন"></div>
+    <div id="listContainer">
+      <div class="loading-note">তথ্য লোড হচ্ছে...</div>
+    </div>
+  </section>
+
+  <!-- রিপোর্ট ও ব্যাকআপ -->
+  <section class="panel" data-panel="report" hidden>
+    <div class="sec"><h2>📅 মাসিক স্টেটমেন্ট</h2><p>মাস বেছে PDF বা Excel নিন</p></div>
+    <div class="card">
+      <div class="month-head">
+        <div class="field">
+          <label>মাস বেছে নিন</label>
+          <input type="month" id="monthPick">
+        </div>
+      </div>
+      <div class="msum" id="monthSummary"></div>
+      <div class="btn-row">
+        <button type="button" class="btn" id="btnPdf">📄 PDF স্টেটমেন্ট</button>
+        <button type="button" class="btn alt" id="btnCsv">📊 Excel ফাইল</button>
+      </div>
+    </div>
+
+    <div class="sec"><h2>💾 ব্যাকআপ</h2><p>হিসাব হারানোর ভয় নেই</p></div>
+    <div class="card">
+      <div class="note-text">সব হিসাব একটা ফাইলে সেভ করে রাখুন। ফোন বদলালে বা ব্রাউজার ডেটা মুছে গেলে এই ফাইল থেকে হিসাব ফিরিয়ে আনতে পারবেন।</div>
+      <div id="lastBackup" class="last-backup"></div>
+      <div class="btn-row">
+        <button type="button" class="btn" id="btnBackup">⬇️ ব্যাকআপ নিন</button>
+        <button type="button" class="btn alt" id="btnRestore">⬆️ ফিরিয়ে আনুন</button>
+      </div>
+      <input type="file" id="restoreFile" accept=".json,application/json" style="display:none">
+    </div>
+  </section>
+
+  <footer>
+    <h3>Mehu's Flavour — যোগাযোগ</h3>
+    <div class="ceo-row">
+      <div class="ceo-item"><span class="k">CEO</span><span class="v">Mehnaz Sahariyar Dola</span></div>
+      <div class="ceo-item"><span class="k">মোবাইল</span><span class="v">01934578770</span></div>
+      <div class="ceo-item"><span class="k">ইমেইল</span><span class="v">alicasara@gmail.com</span></div>
+      <div class="ceo-item"><span class="k">ঠিকানা</span><span class="v">Perabo, Sonargaon, Narayanganj</span></div>
+    </div>
+    <div class="copyright">© Mehu's Flavour — নিজের হিসাব নিজে রাখুন, সহজে ও সুন্দরভাবে।</div>
+  </footer>
+</div>
+<dialog id="memoDialog">
+  <h3>✅ হিসাব যোগ হয়েছে</h3>
+  <p id="memoAskText"></p>
+  <div class="dlg-actions">
+    <button type="button" class="btn" id="btnMemoYes">🧾 ক্যাশ মেমো ডাউনলোড করুন</button>
+    <button type="button" class="btn alt" id="btnMemoNo">এখন না</button>
+  </div>
+</dialog>
+<div id="printArea"></div>
+<div class="toast" id="toast"></div>
+<script>
+const STORAGE_KEY = 'mehus_flavour_cake_entries';
+let entries = [];
+function fmtTaka(n){
+  const rounded = Math.round(n);
+  return '৳' + rounded.toLocaleString('en-IN');
+}
+function toast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'), 1800);
+}
+function loadEntries(){
+  try{
+    const raw = localStorage.getItem(STORAGE_KEY);
+    entries = raw ? JSON.parse(raw) : [];
+  }catch(e){
+    entries = [];
+  }
+  render();
+}
+function saveEntries(){
+  try{
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(entries));
+  }catch(e){
+    toast('⚠️ সংরক্ষণে সমস্যা হয়েছে');
+  }
+}
+function paidOf(e){
+  // old entries have no "paid" field -> treated as fully paid
+  if(e.paid === undefined || e.paid === null) return Number(e.sale)||0;
+  return Number(e.paid)||0;
+}
+function dueOf(e){
+  return Math.max(0, (Number(e.sale)||0) - paidOf(e));
+}
+function computeStats(list){
+  list = list || entries;
+  let sales=0, cost=0, due=0;
+  list.forEach(e=>{ sales += Number(e.sale)||0; cost += Number(e.cost)||0; due += dueOf(e); });
+  return {sales, cost, profit: sales-cost, count: list.length, due, received: sales-due};
+}
+function render(){
+  const s = computeStats();
+  document.getElementById('statSales').textContent = fmtTaka(s.sales);
+  document.getElementById('statCost').textContent = fmtTaka(s.cost);
+  document.getElementById('statProfit').textContent = fmtTaka(s.profit);
+  document.getElementById('statCount').textContent = s.count.toLocaleString('en-IN');
+  document.getElementById('statDue').textContent = fmtTaka(s.due);
+  renderDue();
+  renderMonth();
+  const container = document.getElementById('listContainer');
+  if(entries.length === 0){
+    container.innerHTML = '<div class="empty-state">এখনও কোনো হিসাব যোগ করা হয়নি।<br>উপরের ফর্ম থেকে প্রথম কেকের হিসাব যোগ করুন।</div>';
+    return;
+  }
+  const sorted = [...entries].sort((a,b)=> new Date(b.date) - new Date(a.date));
+  let rows = '';
+  sorted.forEach(e=>{
+    const profit = (Number(e.sale)||0) - (Number(e.cost)||0);
+    const profitClass = profit >= 0 ? 'profit-pos' : 'profit-neg';
+    const due = dueOf(e);
+    const custLine = (e.customer || e.phone) ? `<br><small class="cust">👤 ${escapeHtml(e.customer||'')} ${escapeHtml(e.phone||'')}</small>` : '';
+    rows += `<tr>
+      <td>${e.date}</td>
+      <td>${escapeHtml(e.name)}${custLine}</td>
+      <td>${escapeHtml(e.flavor)}</td>
+      <td>${e.pound} পাউন্ড</td>
+      <td>${fmtTaka(e.sale)}</td>
+      <td>${fmtTaka(e.cost)}</td>
+      <td class="${profitClass}">${fmtTaka(profit)}</td>
+      <td>${due>0 ? '<span class="badge-due">'+fmtTaka(due)+'</span>' : '<span class="badge-paid">পরিশোধ ✓</span>'}</td>
+      <td>${escapeHtml(e.note||'-')}</td>
+      <td>${due>0 ? `<button class="pay-btn" data-pay="${e.id}">টাকা নিলাম</button>` : ''}<button class="memo-btn" data-memo="${e.id}">🧾 মেমো</button><button class="del-btn" data-id="${e.id}">মুছুন</button></td>
+    </tr>`;
+  });
+  container.innerHTML = `<div class="table-wrap"><table>
+    <thead><tr>
+      <th>তারিখ</th><th>নাম</th><th>ফ্লেভার</th><th>পাউন্ড</th>
+      <th>বিক্রয়</th><th>খরচ</th><th>লাভ</th><th>বাকি</th><th>নোট</th><th></th>
+    </tr></thead>
+    <tbody>${rows}</tbody>
+  </table></div>`;
+  bindPayButtons(container);
+  container.querySelectorAll('.del-btn').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      const id = btn.getAttribute('data-id');
+      if(confirm('এই হিসাবটি মুছে ফেলতে চান?')){
+        entries = entries.filter(e=> String(e.id) !== String(id));
+        saveEntries();
+        render();
+        toast('হিসাব মুছে ফেলা হয়েছে');
+      }
+    });
+  });
+}
+function bindPayButtons(root){
+  root.querySelectorAll('[data-pay]').forEach(btn=>{
+    btn.addEventListener('click', ()=> receivePayment(btn.getAttribute('data-pay')));
+  });
+}
+function receivePayment(id){
+  const e = entries.find(x=> String(x.id) === String(id));
+  if(!e) return;
+  const due = dueOf(e);
+  if(due <= 0) return;
+  const input = prompt('কত টাকা পেলেন? (বাকি আছে ' + fmtTaka(due) + ')', due);
+  if(input === null) return;
+  let amt = parseFloat(input);
+  if(!(amt > 0)){ toast('সঠিক টাকার পরিমাণ লিখুন'); return; }
+  if(amt > due) amt = due;
+  e.paid = paidOf(e) + amt;
+  e.payments = e.payments || [];
+  e.payments.push({date: new Date().toISOString().slice(0,10), amt});
+  saveEntries();
+  render();
+  toast('✅ ' + fmtTaka(amt) + ' গ্রহণ করা হয়েছে');
+}
+function renderDue(){
+  const box = document.getElementById('dueContainer');
+  const list = entries.filter(e=> dueOf(e) > 0).sort((a,b)=> new Date(a.date) - new Date(b.date));
+  if(list.length === 0){
+    box.innerHTML = '<div class="empty-state">কোনো বাকি নেই 🎉</div>';
+    return;
+  }
+  const total = list.reduce((t,e)=> t + dueOf(e), 0);
+  let html = `<p class="due-total">মোট বাকি: ${fmtTaka(total)} (${list.length.toLocaleString('en-IN')}টি অর্ডার)</p><div class="due-list">`;
+  list.forEach(e=>{
+    const who = e.customer ? escapeHtml(e.customer) : 'নাম দেওয়া নেই';
+    const phone = e.phone ? ` • <a href="tel:${escapeHtml(e.phone)}">${escapeHtml(e.phone)}</a>` : '';
+    html += `<div class="due-item">
+      <div>
+        <div class="who">${who}${phone}</div>
+        <div class="meta">${e.date} • ${escapeHtml(e.name)} • মোট ${fmtTaka(e.sale)}, পেয়েছি ${fmtTaka(paidOf(e))}</div>
+      </div>
+      <div>
+        <div class="amt">${fmtTaka(dueOf(e))}</div>
+        <button class="pay-btn" data-pay="${e.id}">টাকা নিলাম</button>
+      </div>
+    </div>`;
+  });
+  html += '</div>';
+  box.innerHTML = html;
+  bindPayButtons(box);
+}
+/* ---------- Monthly statement ---------- */
+const monthPick = document.getElementById('monthPick');
+(function(){
+  const d = new Date();
+  monthPick.value = d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0');
+})();
+monthPick.addEventListener('change', renderMonth);
+function monthEntries(){
+  const m = monthPick.value;
+  if(!m) return [];
+  return entries.filter(e=> (e.date||'').startsWith(m)).sort((a,b)=> new Date(a.date) - new Date(b.date));
+}
+function monthLabel(){
+  const m = monthPick.value;
+  if(!m) return '';
+  try{ return new Date(m + '-01').toLocaleDateString('bn-BD', {month:'long', year:'numeric'}); }
+  catch(e){ return m; }
+}
+function renderMonth(){
+  const list = monthEntries();
+  const s = computeStats(list);
+  document.getElementById('monthSummary').innerHTML = `
+    <div><div class="k">কেক / অর্ডার</div><div class="v">${s.count.toLocaleString('en-IN')}</div></div>
+    <div><div class="k">বিক্রয়</div><div class="v">${fmtTaka(s.sales)}</div></div>
+    <div><div class="k">খরচ</div><div class="v">${fmtTaka(s.cost)}</div></div>
+    <div><div class="k">লাভ</div><div class="v g">${fmtTaka(s.profit)}</div></div>
+    <div><div class="k">বাকি</div><div class="v r">${fmtTaka(s.due)}</div></div>`;
+}
+document.getElementById('btnPdf').addEventListener('click', ()=>{
+  const list = monthEntries();
+  if(list.length === 0){ toast('এই মাসে কোনো হিসাব নেই'); return; }
+  const s = computeStats(list);
+  let rows = '';
+  list.forEach((e,i)=>{
+    const profit = (Number(e.sale)||0) - (Number(e.cost)||0);
+    const cust = [e.customer, e.phone].filter(Boolean).join(' / ');
+    rows += `<tr>
+      <td>${i+1}</td><td>${e.date}</td>
+      <td>${escapeHtml(e.name)}${cust ? '<br>' + escapeHtml(cust) : ''}</td>
+      <td>${escapeHtml(e.flavor)}<br>${escapeHtml(String(e.pound))} পাউন্ড</td>
+      <td>${fmtTaka(e.sale)}</td><td>${fmtTaka(paidOf(e))}</td><td>${fmtTaka(dueOf(e))}</td>
+      <td>${fmtTaka(e.cost)}</td><td>${fmtTaka(profit)}</td></tr>`;
+  });
+  document.getElementById('printArea').innerHTML = `
+    <h2><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiB2aWV3Qm94PSIwIDAgMjAwIDIwMCI+CjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI2YwNDc5YSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzhmMGY1MCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPgo8Y2lyY2xlIGN4PSIxMDAiIGN5PSIxMDAiIHI9Ijk2IiBmaWxsPSJ1cmwoI2cpIi8+CjxjaXJjbGUgY3g9IjEwMCIgY3k9IjEwMCIgcj0iODgiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLW9wYWNpdHk9Ii42IiBzdHJva2Utd2lkdGg9IjMiIHN0cm9rZS1kYXNoYXJyYXk9IjIgNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CjxyZWN0IHg9IjM4IiB5PSIxNDYiIHdpZHRoPSIxMjQiIGhlaWdodD0iOSIgcng9IjQuNSIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iLjkyIi8+CjxyZWN0IHg9IjUyIiB5PSIxMTIiIHdpZHRoPSI5NiIgaGVpZ2h0PSIzNiIgcng9IjgiIGZpbGw9IiNmZmYwZTgiLz4KPHJlY3QgeD0iNTIiIHk9IjEyOCIgd2lkdGg9Ijk2IiBoZWlnaHQ9IjQiIGZpbGw9IiNmMGNkYjgiLz4KPHJlY3QgeD0iNTAiIHk9IjEwNiIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMiIgcng9IjYiIGZpbGw9IiNmZmI2ZDUiLz4KPGcgZmlsbD0iI2ZmYjZkNSI+PGVsbGlwc2UgY3g9IjY0IiBjeT0iMTE4IiByeD0iNSIgcnk9IjkiLz48ZWxsaXBzZSBjeD0iOTAiIGN5PSIxMTgiIHJ4PSI1IiByeT0iNyIvPjxlbGxpcHNlIGN4PSIxMTYiIGN5PSIxMTgiIHJ4PSI1IiByeT0iMTAiLz48ZWxsaXBzZSBjeD0iMTM4IiBjeT0iMTE4IiByeD0iNSIgcnk9IjciLz48L2c+CjxyZWN0IHg9IjY4IiB5PSI4MCIgd2lkdGg9IjY0IiBoZWlnaHQ9IjMwIiByeD0iOCIgZmlsbD0iI2ZmZiIvPgo8cmVjdCB4PSI2NiIgeT0iNzYiIHdpZHRoPSI2OCIgaGVpZ2h0PSIxMiIgcng9IjYiIGZpbGw9IiNmZmI2ZDUiLz4KPGcgZmlsbD0iI2ZmYjZkNSI+PGVsbGlwc2UgY3g9IjgwIiBjeT0iODgiIHJ4PSI0LjUiIHJ5PSI4Ii8+PGVsbGlwc2UgY3g9IjEwNCIgY3k9Ijg4IiByeD0iNC41IiByeT0iNiIvPjxlbGxpcHNlIGN4PSIxMjQiIGN5PSI4OCIgcng9IjQuNSIgcnk9IjkiLz48L2c+CjxwYXRoIGQ9Ik0xMDAgNjQgUTEwMiA1MiAxMTIgNDYiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzVhOGYzYyIgc3Ryb2tlLXdpZHRoPSIzIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPGNpcmNsZSBjeD0iMTAwIiBjeT0iNjgiIHI9IjkiIGZpbGw9IiNmZjNiNWMiLz4KPGNpcmNsZSBjeD0iOTciIGN5PSI2NSIgcj0iMi42IiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIuOCIvPgo8ZyBmaWxsPSIjZmZmIj48cGF0aCBkPSJNNDggNTggbDMgOCA4IDMgLTggMyAtMyA4IC0zIC04IC04IC0zIDggLTN6Ii8+PHBhdGggZD0iTTE1NCA1MiBsMi41IDYgNiAyLjUgLTYgMi41IC0yLjUgNiAtMi41IC02IC02IC0yLjUgNiAtMi41eiIvPjxwYXRoIGQ9Ik0xNTggMTAwIGwyIDQuNSA0LjUgMiAtNC41IDIgLTIgNC41IC0yIC00LjUgLTQuNSAtMiA0LjUgLTJ6IiBvcGFjaXR5PSIuOCIvPjwvZz4KPC9zdmc+Cg==" alt="" style="height:44px;width:44px;border-radius:50%;vertical-align:middle;margin-right:10px">Mehu's Flavour — মাসিক স্টেটমেন্ট</h2>
+    <div class="pmeta">${monthLabel()} • মোট ${s.count.toLocaleString('en-IN')}টি অর্ডার</div>
+    <table>
+      <thead><tr><th>#</th><th>তারিখ</th><th>অর্ডার / গ্রাহক</th><th>ফ্লেভার</th><th>বিক্রয়</th><th>পেয়েছি</th><th>বাকি</th><th>খরচ</th><th>লাভ</th></tr></thead>
+      <tbody>${rows}</tbody>
+      <tfoot><tr><td colspan="4">মোট</td><td>${fmtTaka(s.sales)}</td><td>${fmtTaka(s.received)}</td><td>${fmtTaka(s.due)}</td><td>${fmtTaka(s.cost)}</td><td>${fmtTaka(s.profit)}</td></tr></tfoot>
+    </table>
+    <div class="pfoot">Mehnaz Sahariyar Dola • 01934578770 • Perabo, Sonargaon, Narayanganj</div>`;
+  toast('প্রিন্ট মেনু থেকে "Save as PDF" বেছে নিন');
+  setTimeout(()=> window.print(), 400);
+});
+document.getElementById('btnCsv').addEventListener('click', ()=>{
+  const list = monthEntries();
+  if(list.length === 0){ toast('এই মাসে কোনো হিসাব নেই'); return; }
+  const q = v => '"' + String(v==null?'':v).replace(/"/g,'""') + '"';
+  const head = ['তারিখ','অর্ডার','গ্রাহক','মোবাইল','ফ্লেভার','পাউন্ড','বিক্রয়','পেয়েছি','বাকি','খরচ','লাভ','নোট'];
+  const lines = [head.map(q).join(',')];
+  list.forEach(e=>{
+    const sale = Number(e.sale)||0, cost = Number(e.cost)||0;
+    lines.push([e.date,e.name,e.customer||'',e.phone||'',e.flavor,e.pound,sale,paidOf(e),dueOf(e),cost,sale-cost,e.note||''].map(q).join(','));
+  });
+  const s = computeStats(list);
+  lines.push(['মোট','','','','','',s.sales,s.received,s.due,s.cost,s.profit,''].map(q).join(','));
+  const blob = new Blob(['\uFEFF' + lines.join('\r\n')], {type:'text/csv;charset=utf-8;'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'Mehus-Flavour-' + monthPick.value + '.csv';
+  document.body.appendChild(a);
+  a.click();
+  setTimeout(()=>{ URL.revokeObjectURL(a.href); a.remove(); }, 500);
+  toast('✅ ফাইল ডাউনলোড হচ্ছে');
+});
+/* ---------- Backup / Restore ---------- */
+const BACKUP_KEY = 'mehus_flavour_last_backup';
+function showLastBackup(){
+  let t = '';
+  try{ t = localStorage.getItem(BACKUP_KEY) || ''; }catch(e){}
+  document.getElementById('lastBackup').textContent = t ? ('শেষ ব্যাকআপ: ' + t) : 'এখনও ব্যাকআপ নেওয়া হয়নি।';
+}
+document.getElementById('btnBackup').addEventListener('click', ()=>{
+  if(entries.length === 0){ toast('ব্যাকআপ নেওয়ার মতো হিসাব নেই'); return; }
+  const data = {app:'mehus_flavour', version:1, exportedAt:new Date().toISOString(), entries};
+  const blob = new Blob([JSON.stringify(data, null, 2)], {type:'application/json'});
+  const today = new Date().toISOString().slice(0,10);
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'Mehus-Flavour-backup-' + today + '.json';
+  document.body.appendChild(a);
+  a.click();
+  setTimeout(()=>{ URL.revokeObjectURL(a.href); a.remove(); }, 500);
+  try{ localStorage.setItem(BACKUP_KEY, today + ' (' + entries.length + 'টি হিসাব)'); }catch(e){}
+  showLastBackup();
+  toast('✅ ব্যাকআপ ফাইল ডাউনলোড হচ্ছে');
+});
+const restoreFile = document.getElementById('restoreFile');
+document.getElementById('btnRestore').addEventListener('click', ()=> restoreFile.click());
+restoreFile.addEventListener('change', ()=>{
+  const f = restoreFile.files[0];
+  if(!f) return;
+  const reader = new FileReader();
+  reader.onload = ()=>{
+    try{
+      const data = JSON.parse(reader.result);
+      const list = Array.isArray(data) ? data : data.entries;
+      if(!Array.isArray(list)) throw new Error('bad');
+      const valid = list.filter(e=> e && e.id !== undefined && e.name !== undefined && e.date);
+      const have = new Set(entries.map(e=> String(e.id)));
+      const fresh = valid.filter(e=> !have.has(String(e.id)));
+      if(fresh.length === 0){ toast('নতুন কোনো হিসাব পাওয়া যায়নি (সব আগে থেকেই আছে)'); }
+      else if(confirm(fresh.length + 'টি হিসাব ফিরিয়ে আনা হবে। আগের হিসাব যেমন আছে তেমনই থাকবে। ঠিক আছে?')){
+        entries = entries.concat(fresh);
+        saveEntries();
+        render();
+        toast('✅ ' + fresh.length + 'টি হিসাব ফিরিয়ে আনা হয়েছে');
+      }
+    }catch(e){
+      toast('⚠️ ফাইলটি সঠিক ব্যাকআপ ফাইল নয়');
+    }
+    restoreFile.value = '';
+  };
+  reader.readAsText(f);
+});
+showLastBackup();
+function escapeHtml(str){
+  const d = document.createElement('div');
+  d.textContent = str;
+  return d.innerHTML;
+}
+const flavorSelect = document.getElementById('flavorSelect');
+const flavorCustomWrap = document.getElementById('flavorCustomWrap');
+flavorSelect.addEventListener('change', ()=>{
+  flavorCustomWrap.classList.toggle('show', flavorSelect.value === '__other');
+});
+const poundSelect = document.getElementById('poundSelect');
+const poundCustomWrap = document.getElementById('poundCustomWrap');
+poundSelect.addEventListener('change', ()=>{
+  poundCustomWrap.classList.toggle('show', poundSelect.value === '__other');
+});
+document.getElementById('cakeDate').valueAsDate = new Date();
+document.getElementById('cakeForm').addEventListener('submit', (ev)=>{
+  ev.preventDefault();
+  const name = document.getElementById('cakeName').value.trim();
+  const date = document.getElementById('cakeDate').value;
+  let flavor = flavorSelect.value;
+  if(flavor === '__other'){
+    flavor = document.getElementById('flavorCustom').value.trim() || 'অন্যান্য';
+  }
+  let pound = poundSelect.value;
+  if(pound === '__other'){
+    pound = document.getElementById('poundCustom').value.trim() || '0';
+  }
+  const sale = parseFloat(document.getElementById('salePrice').value) || 0;
+  const cost = parseFloat(document.getElementById('costPrice').value) || 0;
+  const note = document.getElementById('note').value.trim();
+  const customer = document.getElementById('custName').value.trim();
+  const phone = document.getElementById('custPhone').value.trim();
+  const paidRaw = document.getElementById('paidNow').value.trim();
+  let paid = paidRaw === '' ? sale : (parseFloat(paidRaw) || 0);
+  paid = Math.min(Math.max(paid, 0), sale);
+  const entry = {
+    id: Date.now(),
+    name, date, flavor, pound, sale, cost, note, customer, phone, paid
+  };
+  entries.push(entry);
+  saveEntries();
+  render();
+  toast('✅ হিসাব যোগ করা হয়েছে');
+  ev.target.reset();
+  document.getElementById('cakeDate').valueAsDate = new Date();
+  flavorCustomWrap.classList.remove('show');
+  poundCustomWrap.classList.remove('show');
+});
+/* ---------- Tabs ---------- */
+const tabBtns = [...document.querySelectorAll('.tabs button')];
+function showTab(name){
+  document.querySelectorAll('.panel').forEach(p=>{ p.hidden = p.dataset.panel !== name; });
+  tabBtns.forEach(b=>{
+    const on = b.dataset.tab === name;
+    b.classList.toggle('on', on);
+    b.setAttribute('aria-current', on ? 'page' : 'false');
+  });
+  window.scrollTo({top:0});
+}
+tabBtns.forEach(b=> b.addEventListener('click', ()=> showTab(b.dataset.tab)));
+/* ---------- Live profit / due preview ---------- */
+const calcBox = document.getElementById('calcPreview');
+function updateCalc(){
+  const sale = parseFloat(document.getElementById('salePrice').value) || 0;
+  const cost = parseFloat(document.getElementById('costPrice').value) || 0;
+  const raw = document.getElementById('paidNow').value.trim();
+  let paid = raw === '' ? sale : (parseFloat(raw) || 0);
+  paid = Math.min(Math.max(paid, 0), sale);
+  calcBox.hidden = !(sale || cost);
+  document.getElementById('calcProfit').textContent = fmtTaka(sale - cost);
+  document.getElementById('calcDue').textContent = fmtTaka(sale - paid);
+}
+['salePrice','costPrice','paidNow'].forEach(id=> document.getElementById(id).addEventListener('input', updateCalc));
+const listSearch = document.getElementById('listSearch');
+document.getElementById('cakeForm').addEventListener('submit', ()=>{
+  updateCalc();
+  listSearch.value = '';
+  showTab('list');
+  memoAsk(entries[entries.length-1]);
+});
+listSearch.addEventListener('input', ()=>{
+  const q = listSearch.value.trim().toLowerCase();
+  document.querySelectorAll('#listContainer tbody tr').forEach(tr=>{
+    tr.hidden = !!q && !tr.textContent.toLowerCase().includes(q);
+  });
+});
+/* ---------- Cash memo (PNG) ---------- */
+const memoDialog = document.getElementById('memoDialog');
+let memoId = null;
+function memoAsk(e){
+  memoId = e.id;
+  document.getElementById('memoAskText').textContent =
+    e.name + ' — ' + fmtTaka(e.sale) + '। গ্রাহককে দেওয়ার জন্য ক্যাশ মেমো ডাউনলোড করবেন?';
+  memoDialog.showModal();
+}
+document.getElementById('btnMemoNo').addEventListener('click', ()=> memoDialog.close());
+document.getElementById('btnMemoYes').addEventListener('click', ()=>{
+  const e = entries.find(x=> String(x.id) === String(memoId));
+  memoDialog.close();
+  if(e) makeMemo(e);
+});
+document.addEventListener('click', ev=>{
+  const b = ev.target.closest('[data-memo]');
+  if(!b) return;
+  const e = entries.find(x=> String(x.id) === b.getAttribute('data-memo'));
+  if(e) makeMemo(e);
+});
+const LOGO_SRC = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiB2aWV3Qm94PSIwIDAgMjAwIDIwMCI+CjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI2YwNDc5YSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzhmMGY1MCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPgo8Y2lyY2xlIGN4PSIxMDAiIGN5PSIxMDAiIHI9Ijk2IiBmaWxsPSJ1cmwoI2cpIi8+CjxjaXJjbGUgY3g9IjEwMCIgY3k9IjEwMCIgcj0iODgiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLW9wYWNpdHk9Ii42IiBzdHJva2Utd2lkdGg9IjMiIHN0cm9rZS1kYXNoYXJyYXk9IjIgNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CjxyZWN0IHg9IjM4IiB5PSIxNDYiIHdpZHRoPSIxMjQiIGhlaWdodD0iOSIgcng9IjQuNSIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iLjkyIi8+CjxyZWN0IHg9IjUyIiB5PSIxMTIiIHdpZHRoPSI5NiIgaGVpZ2h0PSIzNiIgcng9IjgiIGZpbGw9IiNmZmYwZTgiLz4KPHJlY3QgeD0iNTIiIHk9IjEyOCIgd2lkdGg9Ijk2IiBoZWlnaHQ9IjQiIGZpbGw9IiNmMGNkYjgiLz4KPHJlY3QgeD0iNTAiIHk9IjEwNiIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMiIgcng9IjYiIGZpbGw9IiNmZmI2ZDUiLz4KPGcgZmlsbD0iI2ZmYjZkNSI+PGVsbGlwc2UgY3g9IjY0IiBjeT0iMTE4IiByeD0iNSIgcnk9IjkiLz48ZWxsaXBzZSBjeD0iOTAiIGN5PSIxMTgiIHJ4PSI1IiByeT0iNyIvPjxlbGxpcHNlIGN4PSIxMTYiIGN5PSIxMTgiIHJ4PSI1IiByeT0iMTAiLz48ZWxsaXBzZSBjeD0iMTM4IiBjeT0iMTE4IiByeD0iNSIgcnk9IjciLz48L2c+CjxyZWN0IHg9IjY4IiB5PSI4MCIgd2lkdGg9IjY0IiBoZWlnaHQ9IjMwIiByeD0iOCIgZmlsbD0iI2ZmZiIvPgo8cmVjdCB4PSI2NiIgeT0iNzYiIHdpZHRoPSI2OCIgaGVpZ2h0PSIxMiIgcng9IjYiIGZpbGw9IiNmZmI2ZDUiLz4KPGcgZmlsbD0iI2ZmYjZkNSI+PGVsbGlwc2UgY3g9IjgwIiBjeT0iODgiIHJ4PSI0LjUiIHJ5PSI4Ii8+PGVsbGlwc2UgY3g9IjEwNCIgY3k9Ijg4IiByeD0iNC41IiByeT0iNiIvPjxlbGxpcHNlIGN4PSIxMjQiIGN5PSI4OCIgcng9IjQuNSIgcnk9IjkiLz48L2c+CjxwYXRoIGQ9Ik0xMDAgNjQgUTEwMiA1MiAxMTIgNDYiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzVhOGYzYyIgc3Ryb2tlLXdpZHRoPSIzIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPGNpcmNsZSBjeD0iMTAwIiBjeT0iNjgiIHI9IjkiIGZpbGw9IiNmZjNiNWMiLz4KPGNpcmNsZSBjeD0iOTciIGN5PSI2NSIgcj0iMi42IiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIuOCIvPgo8ZyBmaWxsPSIjZmZmIj48cGF0aCBkPSJNNDggNTggbDMgOCA4IDMgLTggMyAtMyA4IC0zIC04IC04IC0zIDggLTN6Ii8+PHBhdGggZD0iTTE1NCA1MiBsMi41IDYgNiAyLjUgLTYgMi41IC0yLjUgNiAtMi41IC02IC02IC0yLjUgNiAtMi41eiIvPjxwYXRoIGQ9Ik0xNTggMTAwIGwyIDQuNSA0LjUgMiAtNC41IDIgLTIgNC41IC0yIC00LjUgLTQuNSAtMiA0LjUgLTJ6IiBvcGFjaXR5PSIuOCIvPjwvZz4KPC9zdmc+Cg==';
+function makeMemo(e){
+  const sale = Number(e.sale)||0, paid = paidOf(e), due = dueOf(e);
+  const rows = [['কেক / অর্ডার', e.name], ['ফ্লেভার', e.flavor], ['ওজন', e.pound + ' পাউন্ড']];
+  if(e.note) rows.push(['নোট', e.note]);
+  const W = 800, pad = 48, rh = 46;
+  const H = 120 + 130 + 50 + rows.length*rh + 30 + 3*rh + 150;
+  const Q = Promise.all([
+    document.fonts.load("400 20px 'Hind Siliguri'"),
+    document.fonts.load("700 20px 'Hind Siliguri'")
+  ]).catch(()=>{});
+  const loadLogo = new Promise(res=>{
+    const im = new Image();
+    im.onload = ()=> res(im);
+    im.onerror = ()=> res(null);
+    im.src = LOGO_SRC;
+  });
+  const render = (logo)=>{
+    const c = document.createElement('canvas');
+    c.width = W*2; c.height = H*2;
+    const g = c.getContext('2d');
+    g.scale(2,2);
+    const f = (w,s)=> w + ' ' + s + "px 'Hind Siliguri','Noto Sans Bengali',sans-serif";
+    g.textBaseline = 'middle';
+    g.fillStyle = '#fff'; g.fillRect(0,0,W,H);
+    g.fillStyle = '#8f0f50'; g.fillRect(0,0,W,120);
+    const tx = logo ? pad+100 : pad;
+    if(logo){
+      g.save(); g.beginPath(); g.arc(pad+40,60,42,0,Math.PI*2); g.closePath();
+      g.fillStyle = '#fff'; g.fill(); g.clip();
+      g.drawImage(logo, pad, 20, 80, 80); g.restore();
+    }
+    g.fillStyle = '#fff'; g.textAlign = 'left';
+    g.font = f(700,38); g.fillText(logo ? "Mehu's Flavour" : "🎂 Mehu's Flavour", tx, 48);
+    g.font = f(400,20); g.fillText('ক্যাশ মেমো', tx, 90);
+    g.textAlign = 'right';
+    g.font = f(400,18);
+    g.fillText('মেমো নং: ' + String(e.id).slice(-5), W-pad, 48);
+    g.fillText('তারিখ: ' + e.date, W-pad, 90);
+    let y = 120 + 40;
+    g.textAlign = 'left'; g.fillStyle = '#3a241e';
+    g.font = f(700,22); g.fillText('গ্রাহক: ' + (e.customer || '—'), pad, y);
+    g.font = f(400,20); g.fillStyle = '#7a635c';
+    g.fillText('মোবাইল: ' + (e.phone || '—'), pad, y+40);
+    y += 90;
+    g.fillStyle = '#fff0e8'; g.fillRect(pad, y, W-2*pad, 44);
+    g.fillStyle = '#5a2a20'; g.font = f(700,18);
+    g.textAlign = 'left'; g.fillText('বিবরণ', pad+14, y+22);
+    y += 44 + rh/2;
+    rows.forEach(r=>{
+      g.textAlign = 'left'; g.fillStyle = '#7a635c'; g.font = f(400,20); g.fillText(r[0], pad+14, y);
+      g.textAlign = 'right'; g.fillStyle = '#3a241e'; g.font = f(600,20); g.fillText(String(r[1]), W-pad-14, y, 480);
+      g.strokeStyle = '#f0d9cd'; g.beginPath(); g.moveTo(pad, y+rh/2); g.lineTo(W-pad, y+rh/2); g.stroke();
+      y += rh;
+    });
+    y += 20;
+    const tot = (label, val, color, big)=>{
+      g.textAlign = 'left'; g.fillStyle = '#5a2a20'; g.font = f(big?700:400, big?24:20); g.fillText(label, pad+14, y);
+      g.textAlign = 'right'; g.fillStyle = color; g.font = f(700, big?28:22); g.fillText(val, W-pad-14, y);
+      y += rh;
+    };
+    tot('মোট মূল্য', fmtTaka(sale), '#b91466', true);
+    tot('পেয়েছি', fmtTaka(paid), '#1f8f5f', false);
+    if(due > 0) tot('বাকি', fmtTaka(due), '#c23b3b', true);
+    else tot('অবস্থা', 'সম্পূর্ণ পরিশোধিত ✓', '#1f8f5f', false);
+    y = H - 100;
+    g.strokeStyle = '#e6207f'; g.setLineDash([6,6]); g.beginPath(); g.moveTo(pad, y-20); g.lineTo(W-pad, y-20); g.stroke(); g.setLineDash([]);
+    g.textAlign = 'center'; g.fillStyle = '#e6207f'; g.font = f(700,22); g.fillText('ধন্যবাদ! 💖', W/2, y+6);
+    g.fillStyle = '#7a635c'; g.font = f(400,16);
+    g.fillText('Mehnaz Sahariyar Dola • 01934578770', W/2, y+38);
+    g.fillText('Perabo, Sonargaon, Narayanganj', W/2, y+62);
+    const done = b=>{
+      if(!b){ toast('⚠️ মেমো তৈরি করা যায়নি'); return; }
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(b);
+      a.download = 'Cash-Memo-' + e.date + '-' + String(e.id).slice(-5) + '.png';
+      document.body.appendChild(a); a.click();
+      setTimeout(()=>{ URL.revokeObjectURL(a.href); a.remove(); }, 500);
+      toast('🧾 ক্যাশ মেমো ডাউনলোড হচ্ছে');
+    };
+    try{ c.toBlob(done, 'image/png'); }
+    catch(err){ if(logo) render(null); else toast('⚠️ মেমো তৈরি করা যায়নি'); }
+  };
+  Q.then(()=> loadLogo).then(render);
+}
+loadEntries();
+
+// Register service worker for offline app support
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('sw.js').catch(()=>{});
+  });
+}
+</script>
+</body>
+</html>
